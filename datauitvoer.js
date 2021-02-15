@@ -64,6 +64,23 @@ const uitvoeren = () => {
         html += `<div>${ maakDatum(obj.tijd)}</div>`;
         html += `<div>${obj.tempBuiten} &deg;C</div>`;
         html += `<div>${obj.tempBinnen} &deg;C</div>`;
+        html += `<div>${obj.tempGewenst} &deg;C</div>`;
+        if( obj.tempGewenst > obj.tempBinnen) {
+            html += `<div> <img class="icon" src="afb/vlamaan.svg" alt="CV aan"> </div>`;     
+        } else {
+            html += `<div> <img class="icon" src="afb/vlamUIt.svg" alt="CV uit"> </div>`;    
+        } 
+        if( obj.lichtKamer) {
+            html += `<div> <img class="icon" src="afb/lampAan1.svg" alt="lamp aan"> </div>`;     
+        } else {
+            html += `<div> <img class="icon" src="afb/lampUIt1.svg" alt="lamp uit"> </div>`;    
+        } 
+        if( obj.lichtBuiten ) {
+            html += `<div> <img class="icon" src="afb/lampAan1.svg" alt="lamp aan"> </div>`;     
+        } else {
+            html += `<div> <img class="icon" src="afb/lampUIt1.svg" alt="lamp uit"> </div>`;    
+        } 
+        
         html += "</div>";
     });
     uitvoer.innerHTML = html;
