@@ -1,3 +1,34 @@
 .icon {
-    height: 1.2em;    
+    height: 1.2em;
+    margin-left: 2em;    
+}
+
+.rij {
+    display: flex;
+}
+.rij:nth-child(odd) {
+    background-color: aliceblue;
+}
+
+
+.rij>div {
+    padding: .5em 1em;
+    display: flex;
+    align-items: center;
+}
+
+#uitvoerkop {
+    display: flex;
+    font-weight: 800;
+}
+
+#uitvoerkop>div {
+    padding: .5em .7em;
+}
+
+#uitvoerkop .tijd {
+    padding-right: 4.5em;
+}
+#uitvoerkop .gw {
+    padding: .5em .4em;
 }
